@@ -33,7 +33,7 @@ h1 {
     font-weight: 400;
     font-size: 14rem;
     line-height: 1.6;
-    text-shadow: -1px 0 #eae0d5, 0 1px #eae0d5, 1px 0 #eae0d5, 0 -1px #eae0d5;
+    text-shadow: 0 0 0.2em #eae0d5, 0 0 0.2em #eae0d5, 0 0 0.2em #eae0d5, 0 0 0.2em #eae0d5;
 }
 h2 {
     font-family: 'Vetrino';
