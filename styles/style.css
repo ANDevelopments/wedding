@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Floriselscript';
-    src: url('/WEDDING/styles/fonts/Floriselscript.ttf') format('truetype');
+    src: url('/wedding/styles/fonts/Floriselscript.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Vetrino';
-    src: url('/WEDDING/styles/fonts/Vetrino.otf') format('opentype');
+    src: url('/wedding/styles/fonts/Vetrino.otf') format('opentype');
 }
 
 :root {
