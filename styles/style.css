@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'Floriselscript';
+    src: url('/styles/fonts/Floriselscript.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Vetrino';
+    src: url('/styles/fonts/Vetrino.otf') format('opentype');
+}
+
+:root {
+    --primary: #eae0d5;
+    --secondary: #0a0908;
+}
+html {
+    font-size: calc(100vw / 1920*10);
+}
+body {
+    font-family: 'Vetrino';
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    background-color: var(--primary);
+    color: var(--secondary);
+
+    /*overflow: hidden;*/
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+    font-family: 'Floriselscript';
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 1.3;
+}
+h2 {
+    font-family: 'Vetrino';
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+span,li {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/*hero section*/
+.hero {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    z-index: 10;
+}
+.hero_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    gap: 6.4rem;
+}
+.hero_title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.hero_title_row {
+    overflow: hidden;
+}
+.hero_title_row:nth-child(1) {
+    position: absolute;
+    top: 12rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero_media {
+    position: relative;
+    z-index: -1;
+}
+.hero_media_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.hero_media_image {
+    position: relative;
+    object-fit: cover;
+    opacity: 0.9;
+    width: 24rem;
+    height: 20rem;
+}
+.hero_media_image:nth-child(odd) {
+    margin-right: -1.2rem;
+}
+.hero_media_image:nth-child(even) {
+    margin-right: -1.2rem;
+}
+.hero_media_image:nth-child(1) {
+    width: 28rem;
+    height: 20rem;
+}
+.hero_media_image:nth-child(2) {
+    width: 20rem;
+    height: 38rem;
+}
+.hero_media_image:nth-child(3) {
+    width: 22rem;
+    height: 42rem;
+}
+.hero_media_image:nth-child(4) {
+    width: 24rem;
+    height: 36rem;
+}
+.hero_media_image:nth-child(5) {
+    width: 20rem;
+    height: 30rem;
+}
+
+/*Responsive*/
+@media screen and (max-width: 768px) {
+    html {
+        font-size: calc(100vw / 768 * 10);
+    }
+    h1 {
+        font-size: 11rem;
+    }
+    h2 {
+        font-size: 5rem;
+    }
+    .hero_wrapper {
+        gap:0;
+    }
+    .hero_media {
+        scale: 0.6;
+    }
+}
