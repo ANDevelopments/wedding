@@ -26,4 +26,4 @@ const animateHero = () => {
     .to(hero.media, {yPercent: 0}, 2)
 }
 
-window.addEventListener('DomContentLoaded', init)
+window.addEventListener('DOMContentLoaded', init)
