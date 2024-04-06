@@ -1,3 +1,22 @@
+const countdown = document.querySelector('.countdown');
+const targetDate = new Date('2024-06-06T14:30:00');
+setInterval(updateCountdown, 1000);
+ 
+function updateCountdown() {
+  const now = new Date();
+  const remainingTime = targetDate - now;
+ 
+  const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+ 
+  document.getElementById('days').innerText = days.toString().padStart(2, '0');
+  document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+  document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+  document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+}
+
 gsap.registerPlugin(ScrollTrigger);
 const initFadeInAnimation = () => {
     const fadeElements = document.querySelectorAll(".fade-in");
@@ -24,14 +43,19 @@ const hero = {
     mediaImages: document.querySelectorAll('.hero_media_image')
 };
 
+function playAudio () {
+    var audio = new Audio('./music/RADWIMPS-Sparkle.mp3');
+    audio.play();
+}
+
 const init = ()=> {
-    //alert('Для лучшего погружения, советуем открыть сайт на ПК');
     gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
     gsap.set(hero.media, {autoAlpha: 0, xPercent: -100, yPercent: -25});
     gsap.set(hero.mediaImages, {xPercent: -100});
     gsap.set('.hero_title_row:nth-child(3)', {xPercent: -50, x: 'unset'});
     animateHero();
     initFadeInAnimation();
+    updateCountdown();
 }
 
 const animateHero = ()=> {
@@ -42,4 +66,4 @@ const animateHero = ()=> {
     .to(hero.media, {yPercent: 0}, 2)
 }
 
-window.addEventListener('DOMContentLoaded', init)
+window.addEventListener('load', init)
