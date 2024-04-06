@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header></header>
-    <nav><audio calss="audio" controls src="./music/RADWIMPS-Sparkle.mp3" loop></audio></nav>
+    <header style="display: flex; justify-content: center; margin-top: 2em;">
+        <audio controls src="./music/RADWIMPS-Sparkle.mp3" loop></audio>
+    </header>
     <main>
         <!--hero-->
         <section class="hero">
@@ -29,9 +30,9 @@
             
             <div class="hero_media">
                 <div class="hero_media_wrapper">
+                    <img src="./images/hero/hero-1.jpg" alt="┌( ಠ_ಠ )┘" class="hero_media_image">
                     <img src="./images/hero/hero-2.jpg" alt="┌( ಠ_ಠ )┘" class="hero_media_image">
-                    <img src="./images/hero/hero-5.jpg" alt="┌( ಠ_ಠ )┘" class="hero_media_image">
-                    <img src="./images/hero/hero-4.jpg" alt="┌( ಠ_ಠ )┘" class="hero_media_image">
+                    <img src="./images/hero/hero-3.jpg" alt="┌( ಠ_ಠ )┘" class="hero_media_image">
                 </div>
             </div>
 
@@ -44,28 +45,36 @@
                 <div class="invitation_title fade-in">
                     <h2>Дорогие родные и друзья!</h2>
                 </div>
-                <div class="invitation_p fade-in">
-                    <p>Приглашаем Вас разделить с нами радость особенного для нас события и стать частью нашей семейной истории</p>
-                    <p style="margin-top: 1em; margin-bottom: 1em;">Ждём вас в Челябинске</p>
-                    <h2>6 июня 2024</h2>
-                    <P>(Вместо этого надо сделать календарь с нашим фото на фоне)</P>
+                <div class="invitation_p">
+                    <p class="fade-in">Приглашаем Вас разделить с нами радость особенного для нас события и стать частью нашей семейной истории</p>
+                    <p style="margin-top: 1em; margin-bottom: 1em;" class="fade-in">Ждём Вас в Челябинске</p>
                 </div>
+                <h2 class="fade-in">До свадьбы осталось:</h2>
                 <div class="invitation_timer fade-in">
                     <div class="timer_item">
                         <span id="days">00</span>
                         <span>Дней</span>
                     </div>
+                    <div style="border-left: 1px solid var(--secondary);"></div>
                     <div class="timer_item">
                         <span id="hours">00</span>
                         <span>Часов</span>
                     </div>
+                    <div style="border-left: 1px solid var(--secondary);"></div>
                     <div class="timer_item">
                         <span id="minutes">00</span>
                         <span>Минут</span>
                     </div>
+                    <div style="border-left: 1px solid var(--secondary);"></div>
                     <div class="timer_item">
                         <span id="seconds">00</span>
                         <span>Секунд</span>
+                    </div>
+                </div>
+                <div class="invitation_media fade-in">
+                    <div class="invitation_media_wrapper">
+                        <img src="./images/invitation/invitation-1.jpg" alt="┌( ಠ_ಠ )┘" class="invitation_media_image">
+                        <img src="./images/invitation/invitation-2.jpg" alt="┌( ಠ_ಠ )┘" class="invitation_media_image">
                     </div>
                 </div>
             </div>
@@ -78,9 +87,17 @@
                     <h2>Расписание нашей свадьбы</h2>
                 </div>
                 <div class="timeline_list">
-                    <h3 class="fade-in">14:30<br>Торжественная регистрация</h3>
+                    <h3 class="fade-in">14:00<br>Сбор гостей</h3>
                     <p class="fade-in">
                         Металлургический отдел ЗАГС, ул. Румянцева д. 33<br>
+                        Собираясь на мероприятие, просим взять с собой Ваши улыбки и хорошее настроение
+                    </p>
+                    <div class="arrow-7 fade-in">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h3 class="fade-in">14:30<br>Торжественная регистрация</h3>
+                    <p class="fade-in">
                         На всякий случай приготовьте платочки для трогательного момента
                     </p>
                     <div class="arrow-7 fade-in">
@@ -89,8 +106,7 @@
                     </div>
                     <h3 class="fade-in">16:00<br>Начало банкета</h3>
                     <p class="fade-in">
-                        Проспект Ленина 13а/1, парк Терешковой<br>
-                        Собираясь на мероприятие, просим взять с собой Ваши улыбки и хорошее настроение
+                        Время вкусной еды, танцев и развлечений
                     </p>
                     <div class="arrow-7 fade-in">
                         <span></span>
@@ -102,7 +118,7 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <h3 class="fade-in">20:00<br>Окончание вечера</h3>
+                    <h3 class="fade-in">22:00<br>Окончание вечера</h3>
                     <p class="fade-in">К сожалению, даже такой прекрасный вечер может закончиться</p>
                 </div>
             </div>
@@ -136,31 +152,118 @@
                 <div class="dresscode_title fade-in">
                     <h2>Дресс-код</h2>
                 </div>
-                <div class="dresscode_p fade-in">
-                    <p>
+                <div class="dresscode_p">
+                    <p class="fade-in">
                         Нам будет очень приятно, если вы поддержите цветовую гамму торжества и выберите
                         наряды в соответствии с цветовой палитрой нашей свадьбы
                     </p>
+                    <p style="margin-top: 1em; font-weight: 600;" class="fade-in">Мужчины:</p>
+                    <p style="margin-top: 0.5em;" class="fade-in">Классические костюмы и белые рубашки</p>
+                    <p style="margin-top: 1em; font-weight: 600;" class="fade-in">Девушки:</p>
+                    <p style="margin-top: 0.5em; margin-bottom: 1em;" class="fade-in">Наряды в соответствии с цветовой палитрой нашей свадьбы</p>
                     <div class="palitra">
-                        <div class="palitra_row">
+                        <div class="palitra_row fade-in">
                             <div style="background: #94b39c;" class="circle"></div>
                             <div style="background: #799077;" class="circle"></div>
                             <div style="background: #2c442d;" class="circle"></div>
                         </div>
-                        <div class="palitra_row">
-                            <div style="background-color: #f4eeed;" class="circle"></div>
+                        <div class="palitra_row fade-in">
                             <div style="background-color: #ecc4b9;" class="circle"></div>
+                            <div style="background-color: #ecb4b4;" class="circle"></div>
                             <div style="background-color: #d0a8a7;" class="circle"></div>
                         </div>
                     </div>
-                    <p style="margin-bottom: 10em;">Это просто чтоб заполнить пустоту для верхнего параграфа</p>
                 </div>
+            </div>
+        </section>
+        <!--wishlist-->
+        <section class="wishlist">
+            <div class="wishlist_wrapper">
+                <hr class="hr_line fade-in">
+                <div class="wishlist_title fade-in">
+                    <h2>Пожелания</h2>
+                </div>
+                <div class="wishlist_p">
+                    <p class="fade-in">
+                        Будем признательны за альтернативу букетам в форме бутылочки вашего любимого напитка
+                         и записки о событии, к которому нам приручить её открытие
+                    </p>
+                    <p style="margin-top: 0.5em;" class="fade-in">
+                        Сразу после свадьбы мы улетаем в путешествие, 
+                        будет очень жаль оставлять цветы увядать дома
+                    </p>
+                </div
+            </div>
+        </section>
+        <!--rsvp-->
+        <section class="rsvp">
+            <div class="rsvp_wrapper">
+                <hr class="hr_line fade-in">
+                <div class="rsvp_title fade-in">
+                    <h2>Анкета гостя</h2>
+                </div>
+                <div class="rsvp_p">
+                    <p class="fade-in">
+                        Пожалуйста, подтвердите своё присутствие на торжестве и ответьте на несколько вопросов до 16.05.2024
+                    </p>
+                    <p class="fade-in">Это поможет нам в организации незабываемого праздника!</p>
+                </div>
+                <div class="fade-in">
+                    <script src="https://forms.yandex.ru/_static/embed.js"></script>
+                    <iframe src="https://forms.yandex.ru/u/6611965a5d2a06bce0d49e27/?iframe=1" frameborder="0" name="ya-form-6611965a5d2a06bce0d49e27" width="650"></iframe>    
+                </div>
+            </div>
+        </section>
+        <!--congratulations-->
+        <section class="congratulations section--pinned">
+            <div class="congratulations_wrapper">
+                <hr class="hr_line fade-in">
+                <div class="congratulations_title">
+                    <h2>Будем рады видеть вас на нашем празднике!</h2>
+                    <h3 style="margin-top: 1em;">Ваши<br>Артем & Сабина</h3>
+                </div>
+                <p>Наши контакты:</p>
+                <div class="contacts_wrapper">
+                    <div class="contacts_item"></div>
+                    <div class="contacts_item"></div>
+                    <div class="contacts_item"></div>
+                </div>
+                <hr style="margin-bottom: 10em;" class="hr_line fade-in">
             </div>
         </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+    <script>
+        SmoothScroll({
+    // Время скролла 400 = 0.4 секунды
+    animationTime    : 800,
+    // Размер шага в пикселях 
+    stepSize         : 75,
+
+    // Дополнительные настройки:
+    
+    // Ускорение 
+    accelerationDelta : 30,  
+    // Максимальное ускорение
+    accelerationMax   : 2,   
+
+    // Поддержка клавиатуры
+    keyboardSupport   : true,  
+    // Шаг скролла стрелками на клавиатуре в пикселях
+    arrowScroll       : 50,
+
+    // Pulse (less tweakable)
+    // ratio of "tail" to "acceleration"
+    pulseAlgorithm   : true,
+    pulseScale       : 4,
+    pulseNormalize   : 1,
+
+    // Поддержка тачпада
+    touchpadSupport   : true,
+})
+    </script>
     <script src="./scripts/index.js"></script>
 </body>
 </html>
