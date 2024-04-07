@@ -122,8 +122,6 @@ span,li {
     position: relative;
     object-fit: cover;
     opacity: 0.9;
-    width: 24rem;
-    height: 20rem;
 }
 .hero_media_image:nth-child(odd) {
     margin-right: -1.2rem;
@@ -183,8 +181,6 @@ span,li {
     position: relative;
     object-fit: cover;
     opacity: 0.9;
-    width: 24rem;
-    height: 20rem;
 }
 .invitation_media_image:nth-child(odd) {
     margin-right: -1.2rem;
@@ -281,8 +277,6 @@ span,li {
     position: relative;
     object-fit: cover;
     opacity: 0.9;
-    width: 24rem;
-    height: 20rem;
 }
 .banket_media_image:nth-child(odd) {
     margin-right: -1.6rem;
@@ -412,6 +406,54 @@ span,li {
     position: relative;
     width: 80%;
     text-align: center;
+}
+.contacts_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contacts_item_img {
+    width: 8rem;
+    margin: auto 3rem;
+    transition: transform 0.3s;
+}
+.contacts_item_img:active {
+    transform: scale(0.8);
+}
+.contacts_item_img:hover {
+    transform: scale(1.2);
+}
+.congratulations_media {
+    position: relative;
+    z-index: -1;
+}
+.congratulations_media_wrapper {
+    margin: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.congratulations_media_image {
+    position: relative;
+    object-fit: cover;
+    opacity: 0.9;
+}
+.congratulations_media_image:nth-child(odd) {
+    margin-right: -1.2rem;
+}
+.congratulations_media_image:nth-child(even) {
+    margin-right: -1.2rem;
+}
+
+.congratulations_media_image2:nth-child(1) {
+    width: 44rem;
+    height: 64rem;
+}
+.congratulations_media_image2:nth-child(2) {
+    width: 40rem;
+    height: 58rem;
 }
 
 /*Responsive*/

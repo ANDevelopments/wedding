@@ -36,54 +36,6 @@ const initFadeInAnimation = () => {
     });
 }
 
-const helpers = {
-  mm: undefined,
-  sumArrayItems: (array, itemsToSum) => {
-    return array.slice(0, itemsToSum).reduce((acc, val) => acc + val, 0)
-  },
-}
-
-const pinSameHeightSections = () => {  
-  document.querySelectorAll('.section--pinned').forEach((section) => {
-    const itemsAmount = section.querySelectorAll('.item').length
-    const itemHeight = (section.querySelectorAll('.item')[0].offsetHeight / window.innerHeight) * 100
-    const overlap = 5
-    const padding = 9
-    const endValue = itemHeight + ((itemsAmount - 1) * overlap) + (padding * 2)
-
-    ScrollTrigger.create({
-      end: `100% ${endValue}%`,
-      endTrigger: section,
-      pin: true,
-      pinSpacing: false,
-      start: `0 ${padding}%`,
-      trigger: section.querySelector('.column--left > div'),
-    })
-
-    ScrollTrigger.create({
-      end: `100% ${endValue}%`,
-      endTrigger: section,
-      pin: true,
-      pinSpacing: false,
-      start: `0 ${padding}%`,
-      trigger: section.querySelector('.column--center > div'),
-    })
-
-    section.querySelectorAll('.item').forEach((item, index) => {
-      ScrollTrigger.create({
-        end: `100% ${endValue}%`,
-        endTrigger: section,
-        onEnter: () => helpers.setMarker(section, index),
-        onLeaveBack: () => helpers.setMarker(section, index === 0 ? index : index - 1),
-        pin: true,
-        pinSpacing: false,
-        start: `0 ${padding + index * overlap}%`,
-        trigger: item,
-      })
-    })
-  })
-}
-
 const hero = {
     element: document.querySelector('.hero'),
     titles: document.querySelectorAll('.hero_title_row_text'),
@@ -99,7 +51,6 @@ const init = ()=> {
     animateHero();
     initFadeInAnimation();
     updateCountdown();
-    pinSameHeightSections();
 }
 
 const animateHero = ()=> {
@@ -108,6 +59,15 @@ const animateHero = ()=> {
     .to(hero.mediaImages, {xPercent: 0, stagger: 0.016}, 0.16)
     .to(hero.titles, {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
     .to(hero.media, {yPercent: 0}, 2)
+}
+
+function copyTextArtem() {
+    navigator.clipboard.writeText("+79128000198");
+    alert("Номер телефона скопирован");
+}
+function copyTextSabina() {
+    navigator.clipboard.writeText("+79226761470");
+    alert("Номер телефона скопирован");
 }
 
 window.addEventListener('load', init)
