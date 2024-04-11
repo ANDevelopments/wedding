@@ -466,7 +466,8 @@ span,li {
 }
 
 .preloader_text {
-  width: 50%;
+    text-align: center;
+    width: 50%;
 }
 
 /*Responsive*/
