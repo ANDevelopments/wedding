@@ -511,7 +511,7 @@ span,li {
         width: 40%;
         margin-top: 2%;
     }
-    .invitation_p, .timeline_list, .banket_p, .dresscode_p, .wishlist_p, .rsvp_p, #preloader {
+    .invitation_p, .timeline_list, .banket_p, .dresscode_p, .wishlist_p, .rsvp_p {
         width: 90%;
     }
     .rsvp_container {
@@ -519,6 +519,9 @@ span,li {
     }
     .banket_map_wrapper {
         width: 80%;
+    }
+    .preloader_text {
+      width: 90%;
     }
 }
 
@@ -570,9 +573,10 @@ span,li {
   align-items: center;
   flex-direction: column;
   z-index: 9999;
-  width: 40%;
 }
- 
+.preloader_text {
+  width: 50%;
+}
 .spinner {
   width: 50px;
   height: 50px;
