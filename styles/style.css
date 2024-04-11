@@ -465,6 +465,10 @@ span,li {
     height: 58rem;
 }
 
+.preloader_text {
+  width: 50%;
+}
+
 /*Responsive*/
 @media screen and (max-width: 768px) {
     html {
@@ -573,9 +577,6 @@ span,li {
   align-items: center;
   flex-direction: column;
   z-index: 9999;
-}
-.preloader_text {
-  width: 50%;
 }
 .spinner {
   width: 50px;
