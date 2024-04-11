@@ -44,6 +44,8 @@ const hero = {
 };
 
 const init = ()=> {
+    var preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
     alert('Для лучшего погружения включите песню сверху страницы. Также советуем потом посмотреть страницу с ПК, там всё ещё красивее)!');
     gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
     gsap.set(hero.media, {autoAlpha: 0, xPercent: -100, yPercent: -25});
