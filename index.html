@@ -12,12 +12,17 @@
         <div class="spinner"></div>
         <p class="preloader_text">Пожалуйста, дождитесь полной загрузки страницы</p>
     </div>
-    <header style="display: flex; justify-content: center; margin-top: 1em;">
-        <audio controls src="./music/RADWIMPS-Sparkle.mp3" loop></audio>
-    </header>
-    <main>
+    <div id="popUp">
+        <p style="font-family: 'eurofurencelight'; text-align: center;">Для лучшего погружения включите песню сверху страницы.<br>Также советуем посмотреть страницу с ПК, там всё ещё красивее)!</p>
+        <button id="continue" class="buttons">Посмотреть приглашение</button>
+        <button id="albumLink" class="buttons">Перейти к фото и видео со свадьбы</button>
+    </div>
+    <main >
         <!--hero-->
         <section class="hero">
+            <div style="display: flex; justify-content: center; margin-top: 1em;">
+                <audio controls src="./music/RADWIMPS-Sparkle.mp3" loop></audio>
+            </div>
             <div class="hero_wrapper">
                 <div class="hero_title">
                     <div class="hero_title_row">
@@ -31,7 +36,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="hero_media">
                 <div class="hero_media_wrapper">
                     <img src="./images/hero/hero-1.jpg" alt="┌( ಠ_ಠ )┘" class="hero_media_image">
@@ -39,8 +43,6 @@
                     <img src="./images/hero/hero-3.jpg" alt="┌( ಠ_ಠ )┘" class="hero_media_image">
                 </div>
             </div>
-
-
         </section>
         <!--invitation-->
         <section class="invitation">

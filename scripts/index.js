@@ -45,15 +45,20 @@ const hero = {
 
 const init = ()=> {
     var preloader = document.getElementById('preloader');
+    var popUp = document.getElementById('popUp');
     preloader.style.display = 'none';
-    alert('Для лучшего погружения включите песню сверху страницы. Также советуем потом посмотреть страницу с ПК, там всё ещё красивее)!');
-    gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
-    gsap.set(hero.media, {autoAlpha: 0, xPercent: -100, yPercent: -25});
-    gsap.set(hero.mediaImages, {xPercent: -100});
-    gsap.set('.hero_title_row:nth-child(3)', {xPercent: -50, x: 'unset'});
-    animateHero();
-    initFadeInAnimation();
-    updateCountdown();
+    popUp.style.display = 'flex';
+    continue_();
+}
+
+const continue_ = ()=> {
+  gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
+  gsap.set(hero.media, {autoAlpha: 0, xPercent: -100, yPercent: -25});
+  gsap.set(hero.mediaImages, {xPercent: -100});
+  gsap.set('.hero_title_row:nth-child(3)', {xPercent: -50, x: 'unset'});
+  animateHero();
+  initFadeInAnimation();
+  updateCountdown();
 }
 
 const animateHero = ()=> {
