@@ -13,11 +13,13 @@
         <p class="preloader_text">Пожалуйста, дождитесь полной загрузки страницы</p>
     </div>
     <div id="popUp">
-        <p style="font-family: 'eurofurencelight'; text-align: center;">Для лучшего погружения включите песню сверху страницы.<br>Также советуем посмотреть страницу с ПК, там всё ещё красивее)!</p>
-        <button id="continue" class="buttons">Посмотреть приглашение</button>
-        <button id="albumLink" class="buttons">Перейти к фото и видео со свадьбы</button>
+        <div class="popUp_wrapper">
+            <p style="font-family: 'eurofurencelight'; text-align: center;">Для лучшего погружения включите песню сверху страницы.<br>Также советуем посмотреть страницу с ПК, там всё ещё красивее!)</p>
+            <button id="continue" class="buttons" onclick="continue_()">Посмотреть приглашение</button>
+            <button id="albumLink" class="buttons">Перейти к фото и видео со свадьбы</button>
+        </div>
     </div>
-    <main >
+    <main id="mainContent" style="display: none;">
         <!--hero-->
         <section class="hero">
             <div style="display: flex; justify-content: center; margin-top: 1em;">

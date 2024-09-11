@@ -48,10 +48,13 @@ const init = ()=> {
     var popUp = document.getElementById('popUp');
     preloader.style.display = 'none';
     popUp.style.display = 'flex';
-    continue_();
 }
 
 const continue_ = ()=> {
+  var popUp = document.getElementById('popUp');
+  var mainContent = document.getElementById('mainContent');
+  popUp.style.display = 'none';
+  mainContent.style.display = 'block';
   gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
   gsap.set(hero.media, {autoAlpha: 0, xPercent: -100, yPercent: -25});
   gsap.set(hero.mediaImages, {xPercent: -100});
