@@ -40,24 +40,44 @@ const hero = {
     element: document.querySelector('.hero'),
     titles: document.querySelectorAll('.hero_title_row_text'),
     media: document.querySelectorAll('.hero_media'),
-    mediaImages: document.querySelectorAll('.hero_media_image')
+    mediaImages: document.querySelectorAll('.hero_media_image'),
+    albumMedia: document.querySelectorAll('.album_media'),
+    albumMediaImages: document.querySelectorAll('.album_media_image')
 };
 
 const init = ()=> {
+  var path = window.location.pathname;
+  var page = path.split("/").pop();
     var preloader = document.getElementById('preloader');
     var popUp = document.getElementById('popUp');
     preloader.style.display = 'none';
-    popUp.style.display = 'flex';
+    if (page == "index.html") {
+      popUp.style.display = 'flex';
+    }
+    else {
+      continue_();
+    }
 }
 
 const continue_ = ()=> {
+  var path = window.location.pathname;
+  var page = path.split("/").pop();
   var popUp = document.getElementById('popUp');
   var mainContent = document.getElementById('mainContent');
-  popUp.style.display = 'none';
-  mainContent.style.display = 'block';
-  gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
-  gsap.set(hero.media, {autoAlpha: 0, xPercent: -100, yPercent: -25});
-  gsap.set(hero.mediaImages, {xPercent: -100});
+  if (page == "index.html") {
+    popUp.style.display = 'none';
+    mainContent.style.display = 'block';
+    gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
+    gsap.set(hero.media, {autoAlpha: 0, xPercent: -100, yPercent: -25});
+    gsap.set(hero.mediaImages, {xPercent: -100});
+  }
+  else {
+    mainContent.style.display = 'block';
+    gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
+    gsap.set(hero.albumMedia, {autoAlpha: 0, xPercent: -100, yPercent: -25});
+    //Вот здесь можно прописать дочерние элементы albumMedia и указать у каждого разный Y, так получится, что они будут спускаться по очереди
+    gsap.set(hero.albumMediaImages, {xPercent: -100});  
+  }
   gsap.set('.hero_title_row:nth-child(3)', {xPercent: -50, x: 'unset'});
   animateHero();
   initFadeInAnimation();
@@ -65,11 +85,21 @@ const continue_ = ()=> {
 }
 
 const animateHero = ()=> {
+  var path = window.location.pathname;
+  var page = path.split("/").pop();
     const tl = gsap.timeline({defaults:{duration: 5, ease: 'expo.inOut'}});
-    tl.to(hero.media, {xPercent: 0, autoAlpha: 1}, 0)
-    .to(hero.mediaImages, {xPercent: 0, stagger: 0.016}, 0.16)
-    .to(hero.titles, {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
-    .to(hero.media, {yPercent: 0}, 2)
+    if (page == "index.html") {
+      tl.to(hero.media, {xPercent: 0, autoAlpha: 1}, 0)
+      .to(hero.mediaImages, {xPercent: 0, stagger: 0.016}, 0.16)
+      .to(hero.titles, {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
+      .to(hero.media, {yPercent: 0}, 2)
+    }
+    else {
+      tl.to(hero.albumMedia, {xPercent: 0, autoAlpha: 1}, 0)
+      .to(hero.albumMediaImages, {xPercent: 0, stagger: 0.016}, 0.16)
+      .to(hero.titles, {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
+      .to(hero.albumMedia, {yPercent: 0}, 2)
+    }
 }
 
 function copyTextArtem() {

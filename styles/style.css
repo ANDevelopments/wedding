@@ -67,6 +67,15 @@ h2 {
     font-weight: 500;
     line-height: 1.1;
 }
+h4 {
+    overflow: hidden;
+    font-family: 'Vetrino';
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
 span,li {
     font-family: 'Vetrino';
     font-size: 4rem;
@@ -90,7 +99,7 @@ span,li {
     display: contents;
     position: absolute;
     width: 100%;
-    height: 40vh;
+    height: 30vh;
     z-index: 10;
 }
 .hero_wrapper {
@@ -130,6 +139,39 @@ span,li {
     position: relative;
     object-fit: cover;
     opacity: 0.9;
+}
+.album_media {
+    margin-top: 10rem;
+    position: relative;
+    z-index: -1;
+}
+.album_media_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.album_media_image {
+    object-fit:cover;
+    position: relative;
+    opacity: 0.9;
+    width: 80rem;
+    height: 50rem;
+    border-radius: 10%;
+    filter: blur(1px);
+}
+.album_head {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    height: max-content;
+    width: max-content;
+    padding: 1rem;
+    border-radius: 25rem;
+    margin-top: -40rem;
 }
 .hero_media_image:nth-child(odd) {
     margin-right: -1.2rem;
