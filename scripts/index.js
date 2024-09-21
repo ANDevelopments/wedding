@@ -75,6 +75,8 @@ const continue_ = ()=> {
     mainContent.style.display = 'block';
     gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
     gsap.set(hero.albumMedia, {autoAlpha: 0, xPercent: -100, yPercent: -25});
+    gsap.set('.album_media:nth-child(2)', {autoAlpha: 0, yPercent: -101});
+    gsap.set('.album_media:nth-child(3)', {autoAlpha: 0, yPercent: -101});
     //Вот здесь можно прописать дочерние элементы albumMedia и указать у каждого разный Y, так получится, что они будут спускаться по очереди
     gsap.set(hero.albumMediaImages, {xPercent: -100});  
   }
