@@ -47,11 +47,10 @@ const hero = {
 
 const init = ()=> {
   var path = window.location.pathname;
-  var page = path.split("/").pop();
     var preloader = document.getElementById('preloader');
     var popUp = document.getElementById('popUp');
     preloader.style.display = 'none';
-    if (page == "index.html") {
+    if (path == "/wedding/") {
       popUp.style.display = 'flex';
     }
     else {
@@ -61,10 +60,9 @@ const init = ()=> {
 
 const continue_ = ()=> {
   var path = window.location.pathname;
-  var page = path.split("/").pop();
   var popUp = document.getElementById('popUp');
   var mainContent = document.getElementById('mainContent');
-  if (page == "index.html") {
+  if (path == "/wedding/") {
     popUp.style.display = 'none';
     mainContent.style.display = 'block';
     gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
@@ -75,8 +73,8 @@ const continue_ = ()=> {
     mainContent.style.display = 'block';
     gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
     gsap.set(hero.albumMedia, {autoAlpha: 0, xPercent: -100, yPercent: -25});
-    gsap.set('.album_media:nth-child(2)', {autoAlpha: 0, yPercent: -101});
-    gsap.set('.album_media:nth-child(3)', {autoAlpha: 0, yPercent: -101});
+    gsap.set('.album_media_wrapper:nth-child(2)', {yPercent: -110, x: 'unset'});
+    gsap.set('.album_media_wrapper:nth-child(3)', {yPercent: -210, x: 'unset'});
     //Вот здесь можно прописать дочерние элементы albumMedia и указать у каждого разный Y, так получится, что они будут спускаться по очереди
     gsap.set(hero.albumMediaImages, {xPercent: -100});  
   }
@@ -88,9 +86,8 @@ const continue_ = ()=> {
 
 const animateHero = ()=> {
   var path = window.location.pathname;
-  var page = path.split("/").pop();
-    const tl = gsap.timeline({defaults:{duration: 5, ease: 'expo.inOut'}});
-    if (page == "index.html") {
+  const tl = gsap.timeline({defaults:{duration: 5, ease: 'expo.inOut'}});
+    if (path == "/wedding/") {
       tl.to(hero.media, {xPercent: 0, autoAlpha: 1}, 0)
       .to(hero.mediaImages, {xPercent: 0, stagger: 0.016}, 0.16)
       .to(hero.titles, {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
@@ -101,6 +98,8 @@ const animateHero = ()=> {
       .to(hero.albumMediaImages, {xPercent: 0, stagger: 0.016}, 0.16)
       .to(hero.titles, {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
       .to(hero.albumMedia, {yPercent: 0}, 2)
+      .to('.album_media_wrapper:nth-child(2)', {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
+      .to('.album_media_wrapper:nth-child(3)', {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
     }
 }
 
