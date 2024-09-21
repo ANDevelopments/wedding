@@ -26,6 +26,13 @@ body {
     background-color: var(--primary);
     color: var(--secondary);
 }
+header {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+}
+
 audio::-webkit-media-controls-panel {
     background-color: #FF5799;
 }
@@ -103,6 +110,7 @@ span,li {
     z-index: 10;
 }
 .hero_wrapper {
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,6 +123,7 @@ span,li {
     width: 100%;
     text-align: center;
 }
+
 .hero_title_row {
     overflow: hidden;
 }
@@ -141,7 +150,7 @@ span,li {
     opacity: 0.9;
 }
 .album_media {
-    margin-top: 10rem;
+    margin-top: 5rem;
     position: relative;
     z-index: -1;
 }
@@ -526,17 +535,8 @@ span,li {
     h2 {
         font-size: 5rem;
     }
-    audio {
-        position: absolute;
-        margin-top: 25rem;
-    }
-    header {
-        margin: auto;
-    }
-    .hero_title{
-        top: 29rem;
-    }
     .hero_wrapper {
+        margin-top: 15rem;
         gap:0;
     }
     .hero_media_image:nth-child(1) {
@@ -553,6 +553,11 @@ span,li {
     }
     .hero_media {
         scale: 0.7;
+        margin-top: -25rem;
+    }
+    .album_media {
+        scale: 0.9;
+        margin-top: -15rem;
     }
     .invitation_media, .banket_media, .congratulations_media {
         scale: 0.85;

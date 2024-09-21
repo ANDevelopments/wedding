@@ -71,11 +71,11 @@ const continue_ = ()=> {
   else if (document.title == 'Свадебный альбом') {
     mainContent.style.display = 'block';
     gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
-    gsap.set(hero.albumMedia, {autoAlpha: 0, xPercent: -100, yPercent: -25});
-    gsap.set('.album_media_wrapper:nth-child(2)', {yPercent: -110, x: 'unset'});
-    gsap.set('.album_media_wrapper:nth-child(3)', {yPercent: -210, x: 'unset'});
+    gsap.set(hero.albumMedia, {autoAlpha: 0, xPercent: -100, yPercent: -15});
+    gsap.set('.album_media_wrapper:nth-child(2)', {yPercent: -90, x: 'unset'});
+    gsap.set('.album_media_wrapper:nth-child(3)', {yPercent: -180, x: 'unset'});
     //Вот здесь можно прописать дочерние элементы albumMedia и указать у каждого разный Y, так получится, что они будут спускаться по очереди
-    gsap.set(hero.albumMediaImages, {xPercent: -100});  
+    gsap.set(hero.albumMediaImages, {xPercent: -50});  
   }
   gsap.set('.hero_title_row:nth-child(3)', {xPercent: -50, x: 'unset'});
   animateHero();
