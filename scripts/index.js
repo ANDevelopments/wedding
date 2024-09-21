@@ -46,14 +46,13 @@ const hero = {
 };
 
 const init = ()=> {
-  var path = window.location.pathname;
     var preloader = document.getElementById('preloader');
     var popUp = document.getElementById('popUp');
     preloader.style.display = 'none';
-    if (path == "/wedding/") {
+    if (document.title == 'Приглашение на свадьбу') {
       popUp.style.display = 'flex';
     }
-    else {
+    else if (document.title == 'Свадебный альбом') {
       continue_();
     }
 }
@@ -62,14 +61,14 @@ const continue_ = ()=> {
   var path = window.location.pathname;
   var popUp = document.getElementById('popUp');
   var mainContent = document.getElementById('mainContent');
-  if (path == "/wedding/") {
+  if (document.title == 'Приглашение на свадьбу') {
     popUp.style.display = 'none';
     mainContent.style.display = 'block';
     gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
     gsap.set(hero.media, {autoAlpha: 0, xPercent: -100, yPercent: -25});
     gsap.set(hero.mediaImages, {xPercent: -100});
   }
-  else {
+  else if (document.title == 'Свадебный альбом') {
     mainContent.style.display = 'block';
     gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
     gsap.set(hero.albumMedia, {autoAlpha: 0, xPercent: -100, yPercent: -25});
@@ -87,13 +86,13 @@ const continue_ = ()=> {
 const animateHero = ()=> {
   var path = window.location.pathname;
   const tl = gsap.timeline({defaults:{duration: 5, ease: 'expo.inOut'}});
-    if (path == "/wedding/") {
+    if (document.title == 'Приглашение на свадьбу') {
       tl.to(hero.media, {xPercent: 0, autoAlpha: 1}, 0)
       .to(hero.mediaImages, {xPercent: 0, stagger: 0.016}, 0.16)
       .to(hero.titles, {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
       .to(hero.media, {yPercent: 0}, 2)
     }
-    else {
+    else if (document.title == 'Свадебный альбом') {
       tl.to(hero.albumMedia, {xPercent: 0, autoAlpha: 1}, 0)
       .to(hero.albumMediaImages, {xPercent: 0, stagger: 0.016}, 0.16)
       .to(hero.titles, {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
