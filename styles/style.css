@@ -152,7 +152,7 @@ span,li {
 .album_media {
     margin-top: 5rem;
     position: relative;
-    z-index: -1;
+    z-index: 1000;
 }
 .album_media_wrapper {
     display: flex;
@@ -171,7 +171,7 @@ span,li {
     filter: blur(1px);
 }
 .album_head {
-    display: flex;
+    display: block;
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -560,7 +560,7 @@ span,li {
     }
     .album_media {
         scale: 0.9;
-        margin-top: -15rem;
+        margin-top: -13rem;
     }
     .invitation_media, .banket_media, .congratulations_media {
         scale: 0.85;
@@ -681,6 +681,10 @@ span,li {
     background-color: rgba(255, 87, 153, 0.10);
     border: none;
 }
+
+.album_head {
+    animation: shakeDeg 0.7s linear infinite;
+}
  
 @keyframes spin {
   0% {
@@ -707,7 +711,7 @@ span,li {
       transform: rotate(-1.3deg);
     }
     50% {
-        transform: rotate(0deg);
+        transform: rotate(0);
     }
     100% {
         transform: rotate(-1.3deg);
