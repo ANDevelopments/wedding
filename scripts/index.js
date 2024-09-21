@@ -1,8 +1,8 @@
 const countdown = document.querySelector('.countdown');
 const targetDate = new Date('2024-06-06T14:30:00');
-setInterval(updateCountdown, 1000);
  
 function updateCountdown() {
+  setInterval(updateCountdown, 1000);
   const now = new Date();
   const remainingTime = targetDate - now;
  
@@ -58,7 +58,6 @@ const init = ()=> {
 }
 
 const continue_ = ()=> {
-  var path = window.location.pathname;
   var popUp = document.getElementById('popUp');
   var mainContent = document.getElementById('mainContent');
   if (document.title == 'Приглашение на свадьбу') {
@@ -67,6 +66,7 @@ const continue_ = ()=> {
     gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
     gsap.set(hero.media, {autoAlpha: 0, xPercent: -100, yPercent: -25});
     gsap.set(hero.mediaImages, {xPercent: -100});
+    updateCountdown();
   }
   else if (document.title == 'Свадебный альбом') {
     mainContent.style.display = 'block';
@@ -80,11 +80,9 @@ const continue_ = ()=> {
   gsap.set('.hero_title_row:nth-child(3)', {xPercent: -50, x: 'unset'});
   animateHero();
   initFadeInAnimation();
-  updateCountdown();
 }
 
 const animateHero = ()=> {
-  var path = window.location.pathname;
   const tl = gsap.timeline({defaults:{duration: 5, ease: 'expo.inOut'}});
     if (document.title == 'Приглашение на свадьбу') {
       tl.to(hero.media, {xPercent: 0, autoAlpha: 1}, 0)
