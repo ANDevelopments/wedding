@@ -71,8 +71,9 @@ const continue_ = ()=> {
   else if (document.title == 'Свадебный альбом') {
     gsap.set(hero.titles, {autoAlpha: 0, yPercent: -101});
     gsap.set(hero.albumMedia, {autoAlpha: 0, xPercent: -100, yPercent: -15});
-    gsap.set('.album_media_wrapper:nth-child(2)', {yPercent: -85, x: 'unset'});
-    gsap.set('.album_media_wrapper:nth-child(3)', {yPercent: -170, x: 'unset'});
+    gsap.set('.album_media_wrapper:nth-child(2)', {yPercent: -80, x: 'unset'});
+    gsap.set('.album_media_wrapper:nth-child(3)', {yPercent: -160, x: 'unset'});
+    gsap.set('.album_media_wrapper:nth-child(4)', {yPercent: -240, x: 'unset'});
     gsap.set(hero.albumMediaImages, {xPercent: -50});  
   }
   gsap.set('.hero_title_row:nth-child(3)', {xPercent: -50, x: 'unset'});
@@ -91,10 +92,11 @@ const animateHero = ()=> {
     else if (document.title == 'Свадебный альбом') {
       tl.to(hero.albumMedia, {xPercent: 0, autoAlpha: 1}, 0)
       .to(hero.albumMediaImages, {xPercent: 0, stagger: 0.016}, 0.16)
-      .to(hero.titles, {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
+      .to(hero.titles, {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2.5)
       .to(hero.albumMedia, {yPercent: 0}, 2)
       .to('.album_media_wrapper:nth-child(2)', {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
       .to('.album_media_wrapper:nth-child(3)', {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
+      .to('.album_media_wrapper:nth-child(4)', {autoAlpha: 1, yPercent: 0, stagger: 0.016}, 2)
     }
 }
 
